@@ -1,0 +1,20 @@
+apply plugin: "war"
+
+bootWar {
+    webAppDirectory = layout.buildDirectory.dir("generated/webapp/")
+    mainClass = "com.mycompany.myapp.PortalAdminApp"
+    includes = ["WEB-INF/**", "META-INF/**"]
+}
+
+war {
+    webAppDirectory = layout.buildDirectory.dir("generated/webapp/")
+    enabled = true
+    archiveExtension = "war.original"
+    includes = ["WEB-INF/**", "META-INF/**"]
+}
+
+if (project.hasProperty("e2e")) {
+    tasks.named('bootWar') {
+        archiveFileName = 'e2e.war'
+    }
+}
