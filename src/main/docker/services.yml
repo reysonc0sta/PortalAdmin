@@ -5,3 +5,13 @@ services:
     extends:
       file: ./postgresql.yml
       service: postgresql
+  evolution:
+    extends:
+      file: ./evolution.yml
+      service: evolution
+    depends_on:
+      postgresql:
+        condition: service_healthy
+
+volumes:
+  evolution_instances:

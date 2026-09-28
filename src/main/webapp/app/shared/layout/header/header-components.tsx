@@ -3,7 +3,7 @@ import { NavItem, NavLink, NavbarBrand } from 'react-bootstrap';
 import { Translate } from 'react-jhipster';
 import { NavLink as Link } from 'react-router';
 
-import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { faComments, faHome } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import logo from '/content/images/logo-jhipster.png';
@@ -30,6 +30,17 @@ export const Home = () => (
       <FontAwesomeIcon icon={faHome} />
       <span>
         <Translate contentKey="global.menu.home">Home</Translate>
+      </span>
+    </NavLink>
+  </NavItem>
+);
+
+export const Whatsapp = () => (
+  <NavItem>
+    <NavLink as={Link} to="/whatsapp" className="d-flex align-items-center" data-cy="whatsapp-menu">
+      <FontAwesomeIcon icon={faComments} />
+      <span>
+        <Translate contentKey="global.menu.whatsapp">WhatsApp</Translate>
       </span>
     </NavLink>
   </NavItem>

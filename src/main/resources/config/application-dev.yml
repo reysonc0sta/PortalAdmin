@@ -98,4 +98,7 @@ jhipster:
 # https://www.jhipster.tech/common-application-properties/
 # ===================================================================
 
-# application:
+application:
+  whatsapp:
+    evolution-url: http://localhost:8085
+    evolution-api-key: portaladmin-evolution-dev-key

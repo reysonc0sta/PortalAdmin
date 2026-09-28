@@ -1,0 +1,29 @@
+# This configuration is intended for development purpose, it's **your** responsibility to harden it for production
+name: portaladmin
+services:
+  evolution:
+    image: evoapicloud/evolution-api:v2.3.7
+    environment:
+      - SERVER_URL=http://localhost:8085
+      - AUTHENTICATION_TYPE=apikey
+      - AUTHENTICATION_API_KEY=portaladmin-evolution-dev-key
+      - DATABASE_ENABLED=true
+      - DATABASE_PROVIDER=postgresql
+      - DATABASE_CONNECTION_URI=postgresql://portalAdmin:portalAdmin@postgresql:5432/portalAdmin?schema=evolution
+      - DATABASE_CONNECTION_CLIENT_NAME=portaladmin_evolution
+      - DATABASE_SAVE_DATA_INSTANCE=true
+      - CACHE_REDIS_ENABLED=false
+      - CACHE_LOCAL_ENABLED=true
+      - CONFIG_SESSION_PHONE_CLIENT=Chrome
+      - CONFIG_SESSION_PHONE_NAME=Chrome
+      - QRCODE_LIMIT=30
+      - LANGUAGE=pt-BR
+    volumes:
+      - evolution_instances:/evolution/instances
+    # If you want to expose these ports outside your dev PC,
+    # remove the "127.0.0.1:" prefix
+    ports:
+      - 127.0.0.1:8085:8080
+
+volumes:
+  evolution_instances:

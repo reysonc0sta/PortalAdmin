@@ -111,4 +111,7 @@ jhipster:
 # https://www.jhipster.tech/common-application-properties/
 # ===================================================================
 
-# application:
+application:
+  whatsapp:
+    evolution-url: ${EVOLUTION_API_URL:http://localhost:8085}
+    evolution-api-key: ${EVOLUTION_API_KEY:}

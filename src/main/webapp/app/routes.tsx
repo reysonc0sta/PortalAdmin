@@ -18,6 +18,8 @@ const loading = <div>loading ...</div>;
 const Account = React.lazy(() => import('app/modules/account'));
 
 const Admin = React.lazy(() => import('app/modules/administration'));
+
+const Whatsapp = React.lazy(() => import('app/modules/whatsapp/whatsapp'));
 const AppRoutes = () => {
   return (
     <div className="view-routes">
@@ -42,6 +44,14 @@ const AppRoutes = () => {
               <Route path="finish" element={<PasswordResetFinish />} />
             </Route>
           </Route>
+          <Route
+            path="whatsapp"
+            element={
+              <PrivateRoute hasAnyAuthorities={[Authority.ADMIN, Authority.USER]}>
+                <Whatsapp />
+              </PrivateRoute>
+            }
+          />
           <Route
             path="admin/*"
             element={

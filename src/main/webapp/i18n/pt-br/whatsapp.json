@@ -1,0 +1,57 @@
+{
+  "whatsapp": {
+    "title": "WhatsApp",
+    "subtitle": "Envie mensagens de WhatsApp pelo seu próprio número. Cada usuário conecta o próprio aparelho.",
+    "connection": {
+      "title": "Conexão",
+      "connected": "Conectado",
+      "disconnected": "Desconectado",
+      "preparing": "Preparando QR Code...",
+      "ready": "WhatsApp conectado",
+      "readyHint": "Você já pode enviar mensagens.",
+      "qrAlt": "QR Code do WhatsApp",
+      "qrExpires": "Este QR Code é renovado em {{ seconds }}s.",
+      "qrUnavailable": "QR Code ainda não disponível. Clique em \"Gerar novo QR Code\".",
+      "pairingCode": "Código de pareamento",
+      "waitingQr": "Aguardando geração do QR Code",
+      "newQr": "Gerar novo QR Code",
+      "switchNumber": "Trocar número",
+      "steps": {
+        "open": "Abra o WhatsApp no celular.",
+        "devices": "Toque em Configurações → Aparelhos conectados.",
+        "scan": "Toque em Conectar um aparelho e escaneie o QR Code."
+      }
+    },
+    "send": {
+      "title": "Enviar mensagem",
+      "connectFirst": "Conecte o seu WhatsApp pelo QR Code antes de enviar mensagens.",
+      "numbers": "Números",
+      "numbersPlaceholder": "11999998888\n5521988887777",
+      "numbersHelp": "Um por linha ou separados por vírgula, com DDD. {{ count }} número(s) informado(s).",
+      "message": "Mensagem",
+      "messagePlaceholder": "Digite a mensagem...",
+      "button": "Enviar para {{ count }} número(s)",
+      "sending": "Enviando...",
+      "sendingHint": "As mensagens são enviadas com uma pequena pausa entre elas para evitar bloqueio do número. Não feche esta página.",
+      "success": "{{ count }} mensagem(ns) enviada(s) com sucesso.",
+      "partial": "{{ sent }} enviada(s), {{ failed }} com falha."
+    },
+    "results": {
+      "title": "Resultado",
+      "sent": "{{ count }} enviada(s)",
+      "failed": "{{ count }} com falha",
+      "number": "Número",
+      "status": "Situação",
+      "ok": "Enviada"
+    },
+    "errors": {
+      "connect": "Erro ao conectar com o WhatsApp.",
+      "send": "Erro ao enviar as mensagens.",
+      "disconnected": "WhatsApp desconectado. Conecte o aparelho pelo QR Code antes de enviar mensagens.",
+      "evolutionUnavailable": "Não foi possível falar com a Evolution API. Verifique se o serviço está no ar.",
+      "noNumbers": "Informe pelo menos um número de telefone.",
+      "tooManyNumbers": "Quantidade de números acima do limite por envio.",
+      "createFailed": "Falha ao criar a instância do WhatsApp."
+    }
+  }
+}
